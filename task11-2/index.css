@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: #fdf5e6;
+  font-family: arial; }
+
+#wrapper {
+  width: 900px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -450px;
+  margin-top: -280px;
+  border: 1px solid gray;
+  background: #fff; }
+
+/*header*/
+#header {
+  width: 100%;
+  overflow: hidden; }
+  #header #h-left {
+    width: 150px;
+    height: 150px;
+    font-size: 36px;
+    color: #fff;
+    float: left;
+    background: #ff0000;
+    margin: 20px;
+    line-height: 150px;
+    text-align: center; }
+    #header #h-left b {
+      font-size: 75px; }
+  #header #h-right {
+    float: left;
+    width: 700px;
+    text-align: center;
+    margin-top: 20px; }
+    #header #h-right p {
+      font-size: 34px;
+      color: #067136;
+      font-weight: bolder;
+      margin: 10px; }
+      #header #h-right p:first-child {
+        font-size: 40px;
+        color: #ff0000;
+        font-weight: bolder; }
+      #header #h-right p:last-child {
+        font-size: 28px;
+        color: #333; }
+
+/*middle*/
+#middle {
+  background: #067136; }
+  #middle ul {
+    padding: 10px 20px 20px;
+    list-style: none;
+    overflow: hidden; }
+    #middle ul li {
+      font-size: 26px;
+      color: #fff;
+      float: left;
+      width: 30px;
+      margin-right: 9px;
+      text-align: center; }
+      #middle ul li:hover {
+        color: #ffff00; }
+        #middle ul li:hover span {
+          background: #ffff00; }
+      #middle ul li span {
+        font-size: 22px;
+        color: #ff0000;
+        display: block;
+        background: #fff;
+        border-radius: 50%;
+        margin-bottom: 5px;
+        font-weight: bold;
+        padding: 2px; }
+      #middle ul li .stop {
+        background: #ffff00; }
+      #middle ul li .active {
+        color: #ffff00; }
+
+/*footer*/
+#footer {
+  text-align: center;
+  margin-bottom: 20px; }
+  #footer p {
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: 800; }
+    #footer p span {
+      margin: 80px; }
+  #footer .arrow {
+    width: 650px;
+    height: 12px;
+    background: #ff0000;
+    margin: 0 auto;
+    margin-top: 2px;
+    position: relative; }
+    #footer .arrow:after {
+      content: "";
+      width: 0;
+      height: 0;
+      border-top: 20px solid transparent;
+      border-left: 82px solid #ff0000;
+      position: absolute;
+      right: -70px;
+      top: -8px; }
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #fdf5e6;
+    font-family: arial;
+}
+
+$c-ffff00:#ffff00;
+$c-ff0000:#ff0000;
+$c-067136:#067136;
+@mixin div-size($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin fontsize-color($fontsize, $color) {
+    font-size: $fontsize;
+    color: $color;
+}
+
+#wrapper {
+    width: 900px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -450px;
+    margin-top: -280px;
+    border: 1px solid gray;
+    background: #fff;
+}
+
+
+/*header*/
+
+#header {
+    width: 100%;
+    overflow: hidden;
+    #h-left {
+        @include div-size(150px, 150px);
+        @include fontsize-color(36px, #fff);
+        float: left;
+        background: $c-ff0000;
+        margin: 20px;
+        line-height: 150px;
+        text-align: center;
+        b {
+            font-size: 75px;
+        }
+    }
+    #h-right {
+        float: left;
+        width: 700px;
+        text-align: center;
+        margin-top: 20px;
+        p {
+            @include fontsize-color(34px, $c-067136);
+            font-weight: bolder;
+            margin: 10px;
+            &:first-child {
+                @include fontsize-color(40px, $c-ff0000);
+                font-weight: bolder;
+            }
+            &:last-child {
+                @include fontsize-color(28px, #333);
+            }
+        }
+    }
+}
+
+
+/*middle*/
+
+#middle {
+    background: $c-067136;
+    ul {
+        padding: 10px 20px 20px;
+        list-style: none;
+        overflow: hidden;
+        li {
+            @include fontsize-color(26px, #fff);
+            float: left;
+            width: 30px;
+            margin-right: 9px;
+            text-align: center;
+            &:hover {
+                color: $c-ffff00;
+                span {
+                    background: $c-ffff00;
+                }
+            }
+            span {
+                @include fontsize-color(22px, $c-ff0000);
+                display: block;
+                background: #fff;
+                border-radius: 50%;
+                margin-bottom: 5px;
+                font-weight: bold;
+                padding: 2px;
+            }
+            .stop {
+                background: $c-ffff00;
+            }
+            .active {
+                color: $c-ffff00;
+            }
+        }
+    }
+}
+
+
+/*footer*/
+
+#footer {
+    text-align: center;
+    margin-bottom: 20px;
+    p {
+        margin-top: 20px;
+        font-size: 22px;
+        font-weight: 800;
+        span {
+            margin: 80px;
+        }
+    }
+    .arrow {
+        @include div-size(650px, 12px);
+        background: $c-ff0000;
+        margin: 0 auto;
+        margin-top: 2px;
+        position: relative;
+        &:after {
+            content: "";
+            @include div-size(0, 0);
+            border: {
+                top: 20px solid transparent;
+                left: 82px solid $c-ff0000;
+            }
+            position:absolute;
+            right:-70px;
+            top:-8px;
+        }
+    }
+}
